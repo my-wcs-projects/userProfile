@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img [src]="user.photo" [alt]="user.name" />
+        </div>
+        <div class="card-content">
+          <p>Nom : {{ user.name }}</p>
+          <p>Prénom : {{ user.firstName }}</p>
+          <p [hidden]="hideAge">Age : {{ user.age }}</p>
+          <p>{{ user.quote }}</p>
+          <p>
+            <input id="quote" [(ngModel)]="user.quote" placeholder="Citation" />
+          </p>
+        </div>
+        <div class="card-action">
+          <button
+            (click)="ageVisibility()"
+            class="waves-effect waves-light btn"
+          >
+            Afficher/Masquer mon age
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
